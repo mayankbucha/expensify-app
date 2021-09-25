@@ -6,15 +6,10 @@ import selectExpenses from '../selectors/expenses'
 // Props is added because of the ConnectedExpenseList hoc
 export const ExpenseList = (props) => (
     <div>
-        {
-            props.expenses.length === 0 ? (
-                <p>No expenses</p>
-            ) : (
-                props.expenses.map((expense) => {
-                    <ExpenseListItem key={expense.id} {...expense}/>
-                })
-            )
-        }        
+        {(props.expenses.length === 0) ? (<p> No Expenses</p>) : 
+        (props.expenses.map((expense) => (
+            <ExpenseListItem key={expense.id} {...expense}/>
+        )))}       
     </div>
 );
 
