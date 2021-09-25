@@ -11,7 +11,7 @@ module.exports = (env) =>{
             // output path takes absolute path                          
             // __dirname: returns absolute path to project folder
             // path.join(): joining absolute path with local path
-            path: path.join(__dirname, "public"),
+            path: path.join(__dirname, "public", "dist"),
             filename: "bundle.js"
         },
     
@@ -54,7 +54,8 @@ module.exports = (env) =>{
         devServer: {
             // absolute path to public dir
             contentBase: path.join(__dirname, "public"),
-            historyApiFallback: true
+            historyApiFallback: true,
+            publicPath: '/dist/'
         }
     }  
 }
