@@ -15,7 +15,9 @@ firebase.initializeApp(firebaseConfig);
 
 // Gives us the access to database releated features
 const database = firebase.database();
-export {firebase, database as default};
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+export {firebase, googleAuthProvider, database as default};
 
 // database.ref('notes').once('value').then((snapshot) => {
 //     const expenses = [];
