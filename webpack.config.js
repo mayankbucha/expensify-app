@@ -16,7 +16,7 @@ module.exports = (env) =>{
     
     return {
         mode: env.production ? "production" : "development",
-        entry: "./src/app.js",
+        entry: ['babel-polyfill', "./src/app.js"],
         output: {
             // output path takes absolute path                          
             // __dirname: returns absolute path to project folder
